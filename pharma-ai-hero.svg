@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5eead4"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="760" height="520" rx="48" fill="#062a27"/>
+<g opacity=".18" stroke="#99f6e4"><path d="M40 90h680M40 170h680M40 250h680M40 330h680M40 410h680"/><path d="M100 40v440M200 40v440M300 40v440M400 40v440M500 40v440M600 40v440M700 40v440"/></g>
+<circle cx="535" cy="250" r="145" fill="none" stroke="#5eead4" stroke-opacity=".3" stroke-width="2"/>
+<circle cx="535" cy="250" r="104" fill="#0b4f49" stroke="#5eead4" stroke-opacity=".5"/>
+<g filter="url(#glow)" stroke="#99f6e4" stroke-width="5" fill="none" stroke-linecap="round">
+ <path d="M490 250h90M535 205v90"/>
+</g>
+<rect x="490" y="155" width="90" height="190" rx="45" fill="url(#g)" transform="rotate(45 535 250)" opacity=".95"/>
+<path d="M480 250h110" stroke="#062a27" stroke-width="9" stroke-linecap="round" transform="rotate(45 535 250)"/>
+<g fill="#99f6e4" stroke="#062a27" stroke-width="5">
+ <circle cx="230" cy="135" r="14"/><circle cx="150" cy="260" r="14"/><circle cx="250" cy="390" r="14"/>
+ <circle cx="390" cy="95" r="14"/><circle cx="390" cy="405" r="14"/><circle cx="655" cy="135" r="14"/><circle cx="670" cy="380" r="14"/>
+</g>
+<g stroke="#5eead4" stroke-width="4" opacity=".75"><path d="M230 135L390 95L535 150"/><path d="M150 260L300 250L430 250L535 250"/><path d="M250 390L390 405L535 350"/><path d="M655 135L610 190L535 205"/><path d="M670 380L610 330L535 295"/></g>
+<g font-family="Arial, sans-serif" fill="#eafffb"><text x="62" y="74" font-size="18" letter-spacing="4" font-weight="700">PHARMACY × AI × COMPUTER SCIENCE</text><text x="62" y="465" font-size="16" fill="#b7e9e2">Intelligent learning • clinical concepts • digital thinking</text></g>
+</svg>
