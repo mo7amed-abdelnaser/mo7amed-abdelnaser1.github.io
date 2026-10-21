@@ -1,0 +1,15 @@
+PHARMAMIND — OFFLINE SHOWCASE EDITION
+
+HOW TO RUN
+1) Open the folder named public
+2) Double-click index.html
+3) It opens in Chrome / Edge. No install, NPM, Node.js, API key, account, or internet is required.
+
+DEMO
+- Study Generator: paste at least 200 characters from lecture notes, choose MCQs / flashcards, then Generate.
+- Drug Interactions: use the built-in examples for the strongest presentation demo.
+- AI Evaluation: shows locally stored demo usage and ratings.
+- Language button switches English / Arabic.
+
+IMPORTANT
+This is an academic offline demonstration. Drug interaction results are educational examples, not clinical advice.
