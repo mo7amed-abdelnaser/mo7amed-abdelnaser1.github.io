@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="ambient"><i></i><i></i><i></i></div>
+<div class="ambient"><i></i><i></i><i></i></div><div id="particles" class="particles" aria-hidden="true"></div>
 <div id="boot" class="boot"><div class="boot-logo">✚</div><b>PharmaMind</b><span>Initializing intelligent workspace…</span><div class="bootbar"><i></i></div></div>
 <header class="top">
   <div class="brand">
@@ -24,7 +24,49 @@
   <button id="langBtn" class="ghost" aria-label="Language">عربي</button>
 </header>
 
-<div class="hero-strip"><div><span class="eyebrow">AI-POWERED PHARMACY WORKSPACE</span><h2>Study smarter. Understand interactions. <em>Think clinically.</em></h2><p>One intelligent workspace for lecture mastery, active recall and safer pharmacology learning.</p></div><div class="orb"><span>AI</span><i></i><i></i></div></div>
+<section class="hero-strip reveal">
+  <div class="hero-copy">
+    <div class="status-pill"><span class="pulse-dot"></span> AI-POWERED PHARMACY INTELLIGENCE <b>LIVE DEMO</b></div>
+    <span class="eyebrow">PHARMACY × ARTIFICIAL INTELLIGENCE × COMPUTER SCIENCE</span>
+    <h2>Learn smarter.<br><em>Think clinically.</em></h2>
+    <p>PharmaMind transforms pharmacy study into an intelligent, visual and interactive experience — from lecture notes to active recall and drug-interaction awareness.</p>
+    <div class="hero-actions"><button class="primary big" onclick="document.querySelector('[data-tab=study]').click()">Explore Study Lab <span>→</span></button><button class="hero-link" onclick="document.querySelector('[data-tab=inter]').click()">Check interactions <span>↗</span></button></div>
+    <div class="hero-meta"><span>⚡ Instant Demo</span><span>🧠 Active Recall</span><span>💊 Pharmacology</span><span>⌘ CS Powered</span></div>
+  </div>
+  <div class="hero-art-wrap">
+    <div class="scan-ring ring-a"></div><div class="scan-ring ring-b"></div>
+    <div class="hero-art-card">
+      <img src="assets/pharma-ai-hero.png" alt="Pharmacy, AI and Computer Science illustration">
+      <div class="hero-art-label"><span>PHARMAMIND CORE</span><b>AI × MEDICINE</b></div>
+    </div>
+    <div class="floating-chip chip-one">✦ Intelligent Study</div>
+    <div class="floating-chip chip-two">◉ Safe Learning</div>
+  </div>
+</section>
+
+<section class="identity-panel reveal">
+  <div><span class="mini-label">ACADEMIC PROJECT</span><h3>Built for the next generation of healthcare learners.</h3><p>A Computer Science showcase that connects intelligent interfaces, structured data and pharmacy education in one polished experience.</p></div>
+  <div class="identity-orbit"><span>AI</span><i>Rx</i><b>CS</b></div>
+</section>
+
+<section class="visual-grid reveal">
+  <article class="visual-card"><img src="assets/pharmacy-ai.png" alt="Pharmacy visualization"><div><span>PHARMACY</span><h3>Clinical Knowledge</h3><p>Turn complex pharmacology topics into focused study material and practical recall.</p></div></article>
+  <article class="visual-card dark"><img src="assets/pharma-ai-hero.png" alt="Artificial intelligence visualization"><div><span>ARTIFICIAL INTELLIGENCE</span><h3>Intelligent Assistance</h3><p>Experience an AI-inspired workflow for generating questions, cards and explanations.</p></div></article>
+  <article class="visual-card"><img src="assets/cs-ai.png" alt="Computer science visualization"><div><span>COMPUTER SCIENCE</span><h3>Technology Behind It</h3><p>Modern UI, interaction logic, responsive design and a clean offline-first architecture.</p></div></article>
+</section>
+
+<section class="media-showcase reveal">
+  <div class="media-heading">
+    <span class="mini-label">THE PHARMAMIND VISION</span>
+    <h3>Where Pharmacy meets <em>AI</em> and Computer Science.</h3>
+    <p>Realistic visual scenes bring the idea to life: medicine, intelligent systems, data, code and clinical knowledge working together.</p>
+  </div>
+  <div class="media-stage">
+    <figure class="media-main"><img src="assets/pharmacy-ai.png" alt="Futuristic pharmacy and AI laboratory scene"><figcaption><b>Pharmacy × AI</b><span>Drug knowledge · molecular intelligence · digital health</span></figcaption></figure>
+    <figure class="media-side media-side-a"><img src="assets/cs-ai.png" alt="Computer science and AI healthcare workspace"><figcaption><b>Computer Science</b><span>Code · analytics · intelligent interfaces</span></figcaption></figure>
+    <div class="media-orbit"><span>AI</span><i>Rx</i><b>CS</b></div>
+  </div>
+</section>
 <main>
   <div class="disclaimer" data-i18n="disclaimer"></div>
 
@@ -95,10 +137,11 @@
 <section class="trust"><span>⚡ Instant Demo</span><span>◈ Grounded Questions</span><span>⌁ Bilingual UI</span><span>▣ Offline-ready</span></section>
 <footer class="site-footer">
   <div class="footer-brand"><span class="footer-mark">✚</span><div><strong>PharmaMind</strong><small>AI • Pharmacy • Computer Science</small></div></div>
-  <div class="footer-credit"><strong>© 2026 Mohamed Abdelnaser Ragab</strong><span>Computer Science Student · MSA University</span><span>Designed &amp; developed with AI for academic showcase purposes.</span></div>
+  <div class="footer-credit"><strong>© 2026 Mohamed Abdelnaser Ragab</strong><span>Computer Science Student · MSA University</span><span>Designed &amp; developed by Mohamed Abdelnaser</span></div>
   <div class="footer-line">Academic Showcase · Offline Demo Edition · Educational use only</div>
 </footer>
 
 <script src="app.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const p=document.getElementById("particles");for(let i=0;i<28;i++){const s=document.createElement("span");s.style.setProperty("--x",Math.random()*100+"vw");s.style.setProperty("--y",Math.random()*100+"vh");s.style.setProperty("--d",(7+Math.random()*12)+"s");s.style.setProperty("--delay",(-Math.random()*12)+"s");p.appendChild(s)}const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});document.querySelectorAll(".reveal,.visual-card,.identity-panel").forEach(e=>obs.observe(e))});</script>
 </body>
 </html>
