@@ -1,15 +1,12 @@
-PHARMAMIND — OFFLINE SHOWCASE EDITION
+PHARMAMIND V5 — PREMIUM VISUAL / FIXED
 
-HOW TO RUN
-1) Open the folder named public
-2) Double-click index.html
-3) It opens in Chrome / Edge. No install, NPM, Node.js, API key, account, or internet is required.
+1) Open the public folder.
+2) Double-click index.html.
+3) The visual images are embedded directly into the page, so they do not depend on an assets path.
+4) No Node.js, NPM, API key, or internet connection is required for the demo.
+5) For GitHub Pages, upload the contents of public to the repository root.
 
-DEMO
-- Study Generator: paste at least 200 characters from lecture notes, choose MCQs / flashcards, then Generate.
-- Drug Interactions: use the built-in examples for the strongest presentation demo.
-- AI Evaluation: shows locally stored demo usage and ratings.
-- Language button switches English / Arabic.
-
-IMPORTANT
-This is an academic offline demonstration. Drug interaction results are educational examples, not clinical advice.
+Developer: Mohamed Abdelnaser Ragab
+MSA University — Computer Science
+© 2026 Mohamed Abdelnaser Ragab
+Designed & developed by Mohamed Abdelnaser
