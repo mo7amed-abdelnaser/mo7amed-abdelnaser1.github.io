@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PharmaMind — AI Study & Interaction Assistant</title>
+<meta name="description" content="AI-powered study companion for pharmacy students: lecture-to-quiz generator and drug interaction explainer.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230f766e'/><path d='M10 22l12-12M12.5 9.5a4 4 0 015.7 5.7l-3 3a4 4 0 01-5.7-5.7z' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"><i></i><i></i><i></i></div>
+<div id="boot" class="boot"><div class="boot-logo">✚</div><b>PharmaMind</b><span>Initializing intelligent workspace…</span><div class="bootbar"><i></i></div></div>
+<header class="top">
+  <div class="brand">
+    <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0f766e"/><path d="M10 22l12-12M12.5 9.5a4 4 0 015.7 5.7l-3 3a4 4 0 01-5.7-5.7z" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    <span>PharmaMind</span>
+  </div>
+  <nav id="tabs" role="tablist">
+    <button role="tab" data-tab="study" class="on" data-i18n="tab_study"></button>
+    <button role="tab" data-tab="inter" data-i18n="tab_inter"></button>
+    <button role="tab" data-tab="eval" data-i18n="tab_eval"></button>
+  </nav>
+  <button id="langBtn" class="ghost" aria-label="Language">عربي</button>
+</header>
+
+<div class="hero-strip"><div><span class="eyebrow">AI-POWERED PHARMACY WORKSPACE</span><h2>Study smarter. Understand interactions. <em>Think clinically.</em></h2><p>One intelligent workspace for lecture mastery, active recall and safer pharmacology learning.</p></div><div class="orb"><span>AI</span><i></i><i></i></div></div>
+<main>
+  <div class="disclaimer" data-i18n="disclaimer"></div>
+
+  <!-- STUDY -->
+  <section id="tab-study" class="tab on">
+    <div class="hero">
+      <h1 data-i18n="study_title"></h1>
+      <p data-i18n="study_sub"></p>
+    </div>
+    <div class="card">
+      <div class="drop" id="drop">
+        <input type="file" id="pdfIn" accept=".txt,text/plain" hidden>
+        <button class="primary" id="pickBtn" data-i18n="upload"></button>
+        <span class="muted" data-i18n="or_paste"></span>
+      </div>
+      <textarea id="lecture" rows="9" data-i18n-ph="paste_ph"></textarea>
+      <div class="row">
+        <label><span data-i18n="n_mcq"></span> <input type="number" id="nMcq" min="1" max="20" value="8"></label>
+        <label><span data-i18n="n_flash"></span> <input type="number" id="nFlash" min="0" max="20" value="8"></label>
+        <span class="muted" id="charCount"></span>
+        <button class="primary big" id="genBtn" data-i18n="generate"></button>
+      </div>
+      <div id="studyMsg" class="msg" role="status"></div>
+    </div>
+
+    <div id="studyOut" hidden>
+      <div class="seg" id="studySeg">
+        <button class="on" data-view="quiz" data-i18n="quiz"></button>
+        <button data-view="cards" data-i18n="cards"></button>
+      </div>
+      <div id="quizBox" class="card"></div>
+      <div id="cardsBox" class="card" hidden></div>
+    </div>
+  </section>
+
+  <!-- INTERACTIONS -->
+  <section id="tab-inter" class="tab">
+    <div class="hero">
+      <h1 data-i18n="inter_title"></h1>
+      <p data-i18n="inter_sub"></p>
+    </div>
+    <div class="card">
+      <div class="chips" id="chips"></div>
+      <div class="row">
+        <input type="text" id="drugIn" data-i18n-ph="drug_ph" autocomplete="off">
+        <button class="ghost" id="addDrug" data-i18n="add"></button>
+      </div>
+      <div class="examples"><span class="muted" data-i18n="try"></span>
+        <button class="chip-ex" data-ex="Warfarin,Aspirin,Omeprazole">Warfarin + Aspirin + Omeprazole</button>
+        <button class="chip-ex" data-ex="Simvastatin,Clarithromycin">Simvastatin + Clarithromycin</button>
+      </div>
+      <div class="row end"><button class="primary big" id="checkBtn" data-i18n="check"></button></div>
+      <div id="interMsg" class="msg" role="status"></div>
+    </div>
+    <div id="interOut"></div>
+  </section>
+
+  <!-- EVAL -->
+  <section id="tab-eval" class="tab">
+    <div class="hero">
+      <h1 data-i18n="eval_title"></h1>
+      <p data-i18n="eval_sub"></p>
+    </div>
+    <div id="evalOut"></div>
+  </section>
+</main>
+
+<section class="trust"><span>⚡ Instant Demo</span><span>◈ Grounded Questions</span><span>⌁ Bilingual UI</span><span>▣ Offline-ready</span></section>
+<footer>PharmaMind · Academic Showcase · Offline Demo Edition</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
